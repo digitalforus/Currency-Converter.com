@@ -40,7 +40,7 @@ html, body{
 	font-weight:300;
     font-size: 100%;
     overflow-x: hidden;
-    background: #f4f7f9;
+    background: black;
 }
 body a{
 	transition: 0.5s all ease;

@@ -11,9 +11,6 @@ if (navigator.serviceWorker) {
 }
 
 
-
-
-
 $(document).ready(function () {
     let countries = {};
 
@@ -53,7 +50,7 @@ $(document).ready(function () {
                         const rate = `1${from} = ${unit}${to}`;
 
                         if (!isNaN(ans)) { 
-                            $("#answer").html(`${ans}`);
+                            $("#answer").html(`${Math.round(ans)}`);
                             $("#rate").html(`${rate}`);
                         }
                     });
