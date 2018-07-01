@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JS Dynamic Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/formStyle.css" rel='stylesheet' type='text/css' />
+</head>
+
+<body class="dashboard-page">
+    <div class="main-grid">
+        <div class="agile-grids">
+            <!-- validation -->
+            <div class="grids">
+                <div class="forms-grids">
+                    <div class="forms3">
+                        <div class="w3agile-validation w3ls-validation">
+
+                            <div class="panel panel-widget agile-validation">
+                                <div class="validation-grids validation-grids-right regist-form">
+                                	<div class="form-header">
+                                        <h1>CURRENCY CONVERTER</h1>
+                                    </div>
+                                    <div class="widget-shadow login-form-shadow basic-forms">
+                                        <div class="form-body form-body-info">
+                                            <form data-toggle="validator" method="POST">
+
+                                                <div class="form-group" id="name">
+                                                    <span class="help-block">
+                                                        <b>Amount</b>
+                                                    </span>
+                                                    <input type="text" class="form-control" id="amount" value="">
+                                                    <span class="err-block" id="amtErr"></span><br>
+                                                    <br>
+                                                </div>
+                                                <div class="form-group" id="type">
+                                                    <span class="help-block">
+                                                        <b>From</b>
+                                                    </span>
+                                                    <select class="form-control" id="from" style="width: 100%; height: 45px;">
+                                                        
+                                                    </select>
+                                                    <br>
+                                                </div>
+                                                <div class="form-group">
+                                                    <span class="help-block">
+                                                        <b>To</b>
+                                                    </span>
+                                                    <select class="form-control" id="to" style="width: 100%; height: 45px;">
+                                                        
+                                                    </select>
+                                                    <br>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <button id="submit" onclick="convert()" class="btn">Submit</button>
+                                                    <span class="err-block" id="ansErr"></span>
+                                                </div>
+                                                <div class="clearfix"> </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer">
+                                        <span id="answer">0.00</span>
+                                        <span id="rate"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //validation -->
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $("#submit").click(function(e){
+            e.preventDefault()
+        });
+    </script>
+    
+    <script type="text/javascript" src="js/idb.js"></script>
+    <script type="text/javascript" src="js/currencyAPI.js"></script>
+</body>
+
+</html>
